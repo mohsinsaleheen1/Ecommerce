@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/Favicon.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-slate-50">
+    <!-- =================NAVBAR=========== -->
+    <nav
+      class="z-10 fixed top-0 left-0 bg-pink-300 flex justify-between items-center flex-wrap py-3 px-3 shadow-md w-full"
+    >
+      <!-- ===============Brand============= -->
+      <div>
+        <span class="text-pink-600 text-2xl font-semibold inline-flex"
+          >Ecommerce</span
+        >
+      </div>
+      <!-- ===============Brand============== -->
+      <!-- ===============toggler btn======== -->
+      <div class="lg:hidden">
+        <button
+          onclick="toglebtn()"
+          class="p-1 rounded-sm hover:border-pink-100 hover:border-2 transition-all"
+        >
+          <div class="w-6 h-1 bg-pink-100"></div>
+          <div class="w-6 h-1 bg-pink-100 my-1"></div>
+          <div class="w-6 h-1 bg-pink-100"></div>
+        </button>
+      </div>
+      <!-- ===============toggler btn========= -->
+      <!-- ===============Menu================ -->
+      <div
+        id="navbar"
+        class="hidden text-center w-full lg:flex lg:items-center lg:w-auto"
+      >
+        <ul class="lg:flex lg:flex-row w-full block text-center">
+          <li class="py-2">
+            <a
+              href="#home"
+              class="text-center px-4 py-2 font-medium text-pink-100 uppercase hover:text-pink-600"
+              >Home</a
+            >
+          </li>
+          <li class="py-2">
+            <a
+              href="#Categories"
+              class="text-center px-4 py-2 font-medium text-pink-100 uppercase hover:text-pink-600"
+              >Categories</a
+            >
+          </li>
+          <!-- ===============Dropdown================ -->
+          <li class="relative">
+            <button
+              onclick="dp()"
+              href="#"
+              class="text-center px-4 py-2 font-medium text-pink-100 uppercase hover:text-pink-600"
+            >
+              Collection
+            </button>
+            <!-- ==============Dropdown-menu========== -->
+            <div
+              id="Drop-Down"
+              class="hidden lg:absolute bg-white rounded-md py-2 w-full lg:w-48 shadow-md text-center"
+            >
+              <ul>
+                <li class="hover:bg-pink-100 hover:text-pink-600 text-lg py-1">
+                  <a href="#men">Men</a>
+                </li>
+                <li class="hover:bg-pink-100 hover:text-pink-600 text-lg py-1">
+                  <a href="#women">Women</a>
+                </li>
+              </ul>
+            </div>
+            <!-- ==============Dropdown-menu========== -->
+          </li>
+          <!-- ===============Dropdown================ -->
+          <li class="py-2">
+            <a
+              href="#gallery"
+              class="text-center px-4 py-2 font-medium text-pink-100 uppercase hover:text-pink-600"
+              >Gallery</a
+            >
+          </li>
+          <li class="py-2">
+            <a
+              href="#about"
+              class="text-center px-4 py-2 font-medium text-pink-100 uppercase hover:text-pink-600"
+              >About us</a
+            >
+          </li>
+          <li class="py-2">
+            <a
+              href="#contact"
+              class="text-center px-4 py-2 font-medium text-pink-100 uppercase hover:text-pink-600"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- ===============Menu================ -->
+    </nav>
+    <!-- =================End NAVBAR=========== -->
+    <!-- =================Header============== -->
+    <header id="home" class="bg-pink-100">
+      <div class="py-20 text-center">
+        <h1 class="text-4xl font-semibold text-pink-500">
+          Outstanding Our Services
+        </h1>
+        <p class="pt-3 text-pink-400">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto hic
+          <br />
+          sequi temporibus asperiores magni deleniti aspernatur quidem sit
+        </p>
+        <button
+          class="rounded-md px-3 py-3 bg-pink-500 w-40 text-xl text-white text font-medium mt-3 hover:text-pink-600 hover:rounded-tl-2xl hover:rounded-br-2xl hover:bg-pink-300 hover:border-2 hover:border-pink-600"
+        >
+          Read more
+        </button>
+        <button
+          class="rounded-md px-3 py-3 bg-pink-500 w-40 text-xl text-white text font-medium mt-3 hover:text-pink-600 hover:rounded-tl-2xl hover:rounded-br-2xl hover:bg-pink-300 hover:border-2 hover:border-pink-600"
+        >
+          Contact
+        </button>
+      </div>
+    </header>
+    <!-- =================End Header============== -->
+    <!-- =================Categories============== -->
+    <section id="Categories">
+      <div class="py-14">
+        <div class="flex justify-center">
+          <div class="w-1 h-10 bg-pink-600 mr-5"></div>
+          <h1 class="text-3xl font-semibold">Categories</h1>
+        </div>
+      </div>
+      <!-- =================Catrgories Name======== -->
+      <div class="mx-10 border-t-2">
+        <div class="grid gap-4 py-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- =========Box1======== -->
+          <div class="relative group">
+            <div class="overflow-hidden">
+              <img
+                src="images/catrgories/p1.webp"
+                class="w-full h-[320px]"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute flex justify-center items-center w-full h-0 left-0 right-0 bottom-0 bg-pink-200/[0.4] opacity-0 group-hover:opacity-[100] group-hover:h-full duration-1000 transition-all backdrop-blur-[1px] backdrop-[]"
+            >
+              <button class="text-3xl font-semibold">Shirts</button>
+            </div>
+          </div>
+          <!-- =========Box2======== -->
+          <div class="relative group">
+            <div class="overflow-hidden">
+              <img
+                src="images/catrgories/p2.jpg"
+                class="w-full h-[320px]"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute flex justify-center items-center w-full h-0 left-0 right-0 bottom-0 bg-pink-200/[0.4] opacity-0 group-hover:opacity-[100] group-hover:h-full duration-1000 transition-all backdrop-blur-[1px] backdrop-[]"
+            >
+              <button class="text-3xl font-semibold">Watches</button>
+            </div>
+          </div>
+          <!-- =========Box3======== -->
+          <div class="relative group">
+            <div class="overflow-hidden">
+              <img
+                src="images/catrgories/p3.png"
+                class="w-full h-[320px]"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute flex justify-center items-center w-full h-0 left-0 right-0 bottom-0 bg-pink-200/[0.4] opacity-0 group-hover:opacity-[100] group-hover:h-full duration-1000 transition-all backdrop-blur-[1px]"
+            >
+              <button class="text-3xl font-semibold">Shoes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- =================end Catrgories Name======== -->
+    </section>
+    <!-- =================End Categories============== -->
+    <!-- ================Men Collection============== -->
+    <section id="men">
+      <div class="py-10">
+        <div class="flex justify-center">
+          <div class="w-1 h-10 bg-pink-600 mr-5"></div>
+          <h1 class="text-3xl font-semibold">Men Collection</h1>
+        </div>
+      </div>
+      <div class="mx-10 border-t-2 px-5 py-5 bg-pink-50/[0.6]">
+        <div class="flex justify-center py-2 px-2">
+          <button
+            data-name="mall"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn1"
+          >
+            Show All
+          </button>
+          <button
+            data-name="mshirts"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn1"
+          >
+            Shirts
+          </button>
+          <button
+            data-name="mshoes"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn1"
+          >
+            Shoes
+          </button>
+          <button
+            data-name="mwatches"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn1"
+          >
+            Watches
+          </button>
+        </div>
+        <!-- ================Products================ -->
+        <div
+          class="py-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md-grid-cols-3 lg:grid-cols-4"
+        >
+          <!-- ==============Shirts============== -->
+          <div
+            data-name="mshirts"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/shirts/p1.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ======================================================================= -->
+          <div
+            data-name="mshirts"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/shirts/p2.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ======================================================================= -->
+          <div
+            data-name="mshirts"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/shirts/p3.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ======================================================================= -->
+          <div
+            data-name="mshirts"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/shirts/p4.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ==============Watches============== -->
+          <div
+            data-name="mwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/watches/p1.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="mwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/watches/p2.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="mwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/watches/p3.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="mwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/watches/p4.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ==============Shoes============== -->
+          <div
+            data-name="mshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p1.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="mshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p2.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="mshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p3.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="mshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center mcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p4.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================End Men Collection============== -->
+    <!-- ================Women Collection============== -->
+    <section id="women">
+      <div class="py-10">
+        <div class="flex justify-center">
+          <div class="w-1 h-10 bg-pink-600 mr-5"></div>
+          <h1 class="text-3xl font-semibold">Women Collection</h1>
+        </div>
+      </div>
+      <div class="mx-10 border-t-2 px-5 py-5 bg-pink-50/[0.6]">
+        <div class="flex justify-center py-2 px-2">
+          <button
+            data-name="wall"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn2"
+          >
+            Show All
+          </button>
+          <button
+            data-name="wshoes"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn2"
+          >
+            Shoes
+          </button>
+          <button
+            data-name="wwatches"
+            class="mx-5 px-2 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 rounded-md btn2"
+          >
+            Watches
+          </button>
+        </div>
+        <!-- ================Products================ -->
+        <div
+          class="py-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md-grid-cols-3 lg:grid-cols-4"
+        >
+          <!-- ==============Watches============== -->
+          <div
+            data-name="wwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/watches/p5.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="wwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/watches/p6.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="wwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/watches/p7.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="wwatches"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/watches/p8.png"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ==============Shoes============== -->
+          <div
+            data-name="wshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p5.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="wshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p6.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="wshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p7.jpg"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+          <!-- ============================================================= -->
+          <div
+            data-name="wshoes"
+            class="bg-pink-100 border-2 border-pink-600 rounded-md text-center wcard"
+          >
+            <div>
+              <img
+                src="images/Shoes/p8.webp"
+                class="rounded-t-md w-full h-[250px]"
+                alt=""
+              />
+            </div>
+            <p class="pt-3 text-pink-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              reprehenderit.
+            </p>
+            <button
+              class="px-2 py-1 rounded-lg my-2 bg-pink-300 hover:bg-pink-400"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================end Women Collection============== -->
+    <!-- ======================Gallery=========================== -->
+    <section id="gallery">
+      <div class="py-16">
+        <div class="flex justify-center">
+          <div class="w-1 h-10 bg-pink-600 mr-5"></div>
+          <h1 class="text-3xl font-semibold">Gallery</h1>
+        </div>
+      </div>
+      <hr />
+      <!-- ==================Gallery Images=============== -->
+      <div
+        class="gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-8 w-full px-8"
+      >
+        <div
+          class="max-w-[400px] max-h-[400px] border-8 border-pink-200 shadow-xl"
+        >
+          <img src="images/gallery/p1.jpg" class="w-full h-full gimg" alt="" />
+        </div>
+        <div
+          class="max-w-[400px] max-h-[400px] border-8 border-pink-200 shadow-xl"
+        >
+          <img src="images/gallery/p3.png" class="w-full h-full gimg" alt="" />
+        </div>
+        <div
+          class="max-w-[400px] max-h-[400px] border-8 border-pink-200 shadow-xl"
+        >
+          <img src="images/gallery/p4.jpg" class="w-full h-full gimg" alt="" />
+        </div>
+      </div>
+      <!-- ==================Gallery Images=============== -->
+      <!-- =================lightbox================== -->
+      <div
+        id="lightbox"
+        class="z-20 flex justify-center items-center top-0 left-0 fixed w-full h-screen bg-black/50 hidden"
+      >
+        <div
+          class="fixed left-[50%] top-[50%] max-w-[600px] -translate-x-2/4 -translate-y-2/4 rounded-md w-full bg-white shadow-md overflow-hidden"
+        >
+          <div class="flex justify-end border-b-2 bg-pink-100">
+            <button class="my-2 mr-4" id="close">
+              <i
+                class="fa-solid fa-xmark text-2xl text-gray-400 hover:text-gray-600"
+              ></i>
+            </button>
+          </div>
+          <div class="flex justify-center grid-cols-1">
+            <div
+              class="border-4 border-pink-300 rounded-lg m-1 max-h-[500px] max-w-[600px]"
+            >
+              <img
+                src="images/gallery/p1.jpg"
+                class="w-full h-full"
+                id="Image"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- =================End lightbox================== -->
+    </section>
+    <!-- ==================End Gallery=========================== -->
+    <!-- ==================About Us=========================== -->
+    <section id="about">
+      <div class="py-7 px-7 my-7 w-full bg-pink-100">
+        <div class="gap-6 grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <img src="images/gallery/p2.jpg" class="w-full" alt="" />
+          </div>
+          <div class="py-5 text-center md:text-left">
+            <div
+              class="flex justify-center md:justify-start pb-10 border-b border-b-pink-200"
+            >
+              <div class="w-1 h-14 bg-pink-600 mr-5"></div>
+              <h1 class="text-4xl font-semibold pt-3">About Us</h1>
+            </div>
+            <p class="text-lg py-3 leading-7 text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptate perferendis nam incidunt velit libero dolores vel error
+              reiciendis nisi dicta.
+            </p>
+            <p class="text-lg font-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              unde debitis dolor rem cum quia soluta porro assumenda
+              necessitatibus. Laudantium molestiae quaerat incidunt
+              reprehenderit explicabo perferendis maxime unde facere cupiditate!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================End About Us=========================== -->
+    <!-- ==================Contact Us=========================== -->
+    <section id="contact">
+      <div class="py-7 px-7 my-10 w-full">
+        <div class="gap-6 grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14484.185542712094!2d67.07149240519875!3d24.82808727030338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c6ffa24d363%3A0xd4f6e17a243d0167!2sQayyumabad%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1693999992569!5m2!1sen!2s"
+              class="w-full h-full"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="py-5 pl-10 text-center md:text-left">
+            <div
+              class="flex justify-center md:justify-start pb-10 border-b border-b-pink-200"
+            >
+              <div class="w-1 h-14 bg-pink-600 mr-5"></div>
+              <h1 class="text-4xl font-semibold pt-3">Contact Us</h1>
+            </div>
+            <p class="text-lg py-3 leading-7 text-pink-400">
+              <i class="fa-solid fa-map-location pr-4"></i>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="text-lg py-3 leading-7 text-pink-400">
+              <i class="fa-solid fa-envelope pr-4"></i>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="text-lg py-3 leading-7 text-pink-400">
+              <i class="fa-solid fa-phone pr-4"></i>
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <textarea
+            name=""
+            class="w-full my-3 rounded-md border px-3 py-2"
+            placeholder="Your Feedback"
+            required
+          ></textarea>
+          <button
+            class="rounded-md px-2 py-2 bg-pink-500 text-xl text-white text font-medium mt-3 hover:text-pink-600 hover:bg-pink-300 hover:border-2 hover:border-pink-600"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ==================Contact Us=========================== -->
+    <!-- ====================Footer============================= -->
+    <footer class="w-full">
+      <div class="py-5 bg-pink-300 text-center">
+        <p class="text-lg text-pink-100">
+          © 2023 Copyright:
+          <a href="#" class="hover:underline hover:text-pink-200"
+            >Ecommerce.com</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="app.js" defer></script>
+</html>
